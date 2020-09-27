@@ -52,4 +52,12 @@ public class Spaceship : MonoBehaviour
     {
         return !this.gameObject.activeSelf;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Asteroid")
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
 }

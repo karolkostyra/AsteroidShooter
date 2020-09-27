@@ -5,8 +5,6 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] ShipController shipController;
-    [SerializeField] float smoothTime = 0f;
-    private Vector3 velocity = Vector3.zero;
 
     private void LateUpdate()
     {

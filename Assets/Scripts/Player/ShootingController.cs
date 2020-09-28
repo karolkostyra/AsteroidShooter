@@ -7,16 +7,25 @@ public class ShootingController : MonoBehaviour
 {
     ProjectilesFactory factory = new ProjectilesFactory();
 
-    private void Update()
+    float timeToShoot = 0.5f;
+    Coroutine coroutine;
+
+    private void OnEnable()
     {
-        HandleInput();
+        coroutine = StartCoroutine(AutoShoot(timeToShoot));
     }
 
-    private void HandleInput()
+    private void OnDisable()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        StopCoroutine(coroutine);
+    }
+
+    private IEnumerator AutoShoot(float _timeToShoot)
+    {
+        while (this.gameObject.activeSelf)
         {
             ShootBullet();
+            yield return new WaitForSeconds(_timeToShoot);
         }
     }
 

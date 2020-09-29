@@ -6,8 +6,10 @@ public class AsteroidGenerator : MonoBehaviour
 {
     [SerializeField] GameObject asteroidPrefab;
 
-    int gridRows = 6;
-    int gridColumns = 6;
+    [SerializeField] int gridSize = 6;
+
+    Vector3 startPosition;
+    int corrector;
 
     private void Awake()
     {
@@ -16,14 +18,21 @@ public class AsteroidGenerator : MonoBehaviour
 
     private void Generate()
     {
-        Vector3 startPosition = new Vector3(-1*(gridColumns-1), 1*(gridRows-1),0);
-
-        for (int i = 0; i < gridRows; i++)
+        if (gridSize % 2 != 0)
         {
-            for (int j = 0; j < gridColumns; j++)
+            corrector = 1;
+        }
+        else
+        {
+            corrector = 0;
+        }
+
+        for (int i = 0; i < gridSize; i++)
+        {
+            for (int j = 0; j < gridSize; j++)
             {
                 Instantiate(asteroidPrefab,
-                            new Vector3(-1 * (gridColumns - 1) + j*2, 1 * (gridRows - 1) - i*2, 0),
+                            new Vector3(-1 * (gridSize - 1) + j * 2 + corrector, 1 * (gridSize - 1) - i * 2 + corrector, 0),
                             Quaternion.identity,
                             this.transform);
             }

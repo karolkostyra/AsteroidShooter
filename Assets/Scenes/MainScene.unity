@@ -2262,6 +2262,21 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7483349175503359005, guid: 0f897778ba2cf01488bfbf017ca02f1b,
+        type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746099009747810680, guid: 0f897778ba2cf01488bfbf017ca02f1b,
+        type: 3}
+      propertyPath: rotateSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7746099009747810680, guid: 0f897778ba2cf01488bfbf017ca02f1b,
+        type: 3}
+      propertyPath: maxVelocity
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f897778ba2cf01488bfbf017ca02f1b, type: 3}
 --- !u!1001 &2554676153619089193
@@ -2526,7 +2541,7 @@ PrefabInstance:
     - target: {fileID: 6679952555690521073, guid: 83bea9e07ec3fac49a4b19653d8d3a03,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6679952555690521074, guid: 83bea9e07ec3fac49a4b19653d8d3a03,
         type: 3}
@@ -2547,7 +2562,7 @@ PrefabInstance:
     - target: {fileID: 6679952555690521074, guid: 83bea9e07ec3fac49a4b19653d8d3a03,
         type: 3}
       propertyPath: gridSize
-      value: 6
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6679952555690521075, guid: 83bea9e07ec3fac49a4b19653d8d3a03,
         type: 3}

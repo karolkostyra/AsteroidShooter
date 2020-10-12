@@ -9,6 +9,7 @@ public class ScrollingUV : MonoBehaviour
     void LateUpdate()
     {
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+        //SpriteRenderer meshRenderer = GetComponent<SpriteRenderer>();
         Material material = meshRenderer.material;
         Vector2 offset = material.mainTextureOffset;
 

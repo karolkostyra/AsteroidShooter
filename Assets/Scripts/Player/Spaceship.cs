@@ -38,7 +38,7 @@ public class Spaceship : MonoBehaviour
         SimulateRocketEngine(yAxis);
         ClampVelocity();
         Rotate(xAxis * rotateSpeed);
-        Debug.Log(_rb.velocity.magnitude);
+        //Debug.Log(_rb.velocity.magnitude);
     }
 
     //method to move spaceship

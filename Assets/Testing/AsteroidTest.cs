@@ -3,40 +3,51 @@ using UnityEngine;
 
 public class AsteroidTest : MonoBehaviour
 {
-    #region Private Fields
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
 
-    float maxRotationAngle;
-    float maxSpeed;
-    float timeToRespawn = 1f;
-    Coroutine coroutine;
-    int randomX, randomY;
+    private float maxRotationAngle;
+    private float minForce;
+    private float maxForce;
+    private float asteroidForce;
+    private float timeToRespawn = 1f;
+    private Coroutine coroutine;
+    private int randomX, randomY;
 
     //positions outside of camera to respawn Asteroids
-    Vector3[] spawnPositions = new Vector3[] { new Vector3(1.2f, 0.5f, 10f),
+    private Vector3[] spawnPositions = new Vector3[] { new Vector3(1.2f, 0.5f, 10f),
                                                new Vector3(-0.2f, 0.5f, 10f),
                                                new Vector3(0.5f, 1.3f, 10f),
                                                new Vector3(0.5f, -0.3f, 10f)};
-    #endregion
 
     private void Start()
     {
+        StopAllCoroutines();
         SetupAsteroid();
+        AsteroidRotation();
+        AsteroidForce();
     }
 
     private void SetupAsteroid()
     {
-        StopAllCoroutines();
-
         rb = GetComponent<Rigidbody2D>();
+
         maxRotationAngle = 360f;
-        maxSpeed = 175f;
+        minForce = 75f;
+        maxForce = 175f;
+    }
 
+    //set a initial asteroid rotation
+    private void AsteroidRotation()
+    {
         float randomDirection = Random.Range(0, maxRotationAngle);
-        float randomSpeed = Random.Range(75f, maxSpeed);
-
         transform.eulerAngles = new Vector3(0f, 0f, randomDirection);
-        rb.AddForce(transform.up * randomSpeed);
+    }
+
+    //add force to the asteroid
+    private void AsteroidForce()
+    {
+        asteroidForce = Random.Range(minForce, maxForce);
+        rb.AddForce(transform.up * asteroidForce);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,6 +61,7 @@ public class AsteroidTest : MonoBehaviour
         }
     }
 
+    //method to respawn the asteroid outside of camera view frustum
     private IEnumerator Respawn(float _timeToRespawn)
     {
         yield return new WaitForSeconds(_timeToRespawn);

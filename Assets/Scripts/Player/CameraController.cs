@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] Spaceship shipController;
+    [SerializeField] private Spaceship shipController;
 
     private void LateUpdate()
     {

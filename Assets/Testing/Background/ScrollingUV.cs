@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class ScrollingUV : MonoBehaviour
 {
-    [SerializeField] float parallax = 8f;
+    [SerializeField] private float parallax = 8f;
 
     void LateUpdate()
     {
         MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
-        //SpriteRenderer meshRenderer = GetComponent<SpriteRenderer>();
         Material material = meshRenderer.material;
         Vector2 offset = material.mainTextureOffset;
 

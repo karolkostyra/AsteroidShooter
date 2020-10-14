@@ -23,9 +23,6 @@ public class Asteroid : MonoBehaviour
     {
         StopAllCoroutines();
         SetupAsteroid();
-        AsteroidRotation();
-        AsteroidForce();
-        AsteroidTorque();
     }
 
     private void SetupAsteroid()
@@ -35,6 +32,10 @@ public class Asteroid : MonoBehaviour
         maxRotationAngle = 360f;
         minForce = 75f;
         maxForce = 175f;
+
+        AsteroidRotation();
+        AsteroidForce();
+        AsteroidTorque();
     }
 
     //set a initial asteroid rotation

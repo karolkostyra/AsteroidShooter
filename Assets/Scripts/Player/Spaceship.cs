@@ -5,16 +5,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Spaceship : MonoBehaviour
 {
-    #region Public Fields
-    #endregion
+    [SerializeField] private float rotateSpeed;
+    [SerializeField] private float maxVelocity = 4;
 
-    #region Private Fields
-    [SerializeField] float rotateSpeed;
-    [SerializeField] float maxVelocity = 4;
-
-    Transform _shipTransform;
-    Rigidbody2D _rb;
-    #endregion
+    private Transform _shipTransform;
+    private Rigidbody2D _rb;
 
     private void Start()
     {

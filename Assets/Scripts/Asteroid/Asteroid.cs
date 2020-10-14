@@ -3,20 +3,18 @@ using UnityEngine;
 
 public class Asteroid : MonoBehaviour
 {
-    #region Private Fields
-    Rigidbody2D rb;
+    private Rigidbody2D rb;
 
-    float maxRotationAngle;
-    float maxSpeed;
-    float timeToRespawn = 1f;
-    Coroutine coroutine;
+    private float maxRotationAngle;
+    private float maxSpeed;
+    private float timeToRespawn = 1f;
+    private Coroutine coroutine;
 
     //positions outside of camera to respawn Asteroids
-    Vector3[] spawnPositions = new Vector3[] { new Vector3(1.2f, 0.5f, 10f),
+    private Vector3[] spawnPositions = new Vector3[] { new Vector3(1.2f, 0.5f, 10f),
                                                new Vector3(-0.2f, 0.5f, 10f),
                                                new Vector3(0.5f, 1.3f, 10f),
                                                new Vector3(0.5f, -0.3f, 10f)};
-    #endregion
 
 
     private void Start()

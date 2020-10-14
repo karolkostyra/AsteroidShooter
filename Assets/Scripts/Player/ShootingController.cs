@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class ShootingController : MonoBehaviour
 {
-    ProjectilesFactory factory = new ProjectilesFactory();
+    private ProjectilesFactory factory = new ProjectilesFactory();
 
-    float timeToShoot = 0.5f;
-    Coroutine coroutine;
+    private float timeToShoot = 0.5f;
+    private Coroutine coroutine;
 
     private void OnEnable()
     {

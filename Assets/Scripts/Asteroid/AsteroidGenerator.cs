@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class AsteroidGenerator : MonoBehaviour
 {
-    [SerializeField] GameObject asteroidPrefab;
+    [SerializeField] private GameObject asteroidPrefab;
 
-    [SerializeField] int gridSize = 6;
+    [SerializeField] private int gridSize = 6;
 
-    Vector3 startPosition;
-    int corrector;
+    private Vector3 startPosition;
+    private int corrector;
 
     private void Awake()
     {

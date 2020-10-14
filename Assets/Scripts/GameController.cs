@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    [SerializeField] Spaceship spaceship;
-    [SerializeField] GameObject startPanel;
-    [SerializeField] GameObject youLosePanel;
+    [SerializeField] private Spaceship spaceship;
+    [SerializeField] private GameObject startPanel;
+    [SerializeField] private GameObject youLosePanel;
 
     private void Awake()
     {

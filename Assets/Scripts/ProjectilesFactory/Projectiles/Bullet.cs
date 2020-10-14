@@ -3,12 +3,10 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    #region Private Fields
-    [SerializeField] float speed = 5f;
-    [SerializeField] float timeToDestroy = 3f;
+    [SerializeField] private float speed = 5f;
+    [SerializeField] private float timeToDestroy = 3f;
 
-    Rigidbody2D rb;
-    #endregion
+    private Rigidbody2D rb;
 
     private void Start()
     {

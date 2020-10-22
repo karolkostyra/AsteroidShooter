@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Radar
   - 
   - 
   - 
@@ -46,4 +46,7 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 1640440989
+    locked: 0
+  - name: UI
+    uniqueID: 1632957953
     locked: 0

@@ -77,7 +77,7 @@ public class Asteroid : MonoBehaviour
         int index = Random.Range(0, spawnPositions.Length);
         Vector3 outsideCameraPos = Camera.main.ViewportToWorldPoint(spawnPositions[index]);
 
-        int camSize = 50;//(int) Camera.main.orthographicSize;
+        int camSize = 25;//(int) Camera.main.orthographicSize;
         
 
         switch (index)

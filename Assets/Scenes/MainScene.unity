@@ -406,7 +406,7 @@ PrefabInstance:
     - target: {fileID: 8158955159726328714, guid: 796c71424336c31459b03dc201fb1996,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8201003468151312571, guid: 796c71424336c31459b03dc201fb1996,
         type: 3}
@@ -2346,7 +2346,12 @@ PrefabInstance:
     - target: {fileID: 6679952555690521074, guid: 83bea9e07ec3fac49a4b19653d8d3a03,
         type: 3}
       propertyPath: gridSize
-      value: 10
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679952555690521074, guid: 83bea9e07ec3fac49a4b19653d8d3a03,
+        type: 3}
+      propertyPath: cellsDistance
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6679952555690521075, guid: 83bea9e07ec3fac49a4b19653d8d3a03,
         type: 3}

@@ -36,7 +36,7 @@ public class MoveSensor : MonoBehaviour
             if (raycastHit2D.collider.isTrigger &&
                 raycastHit2D.collider.gameObject.GetComponent<Asteroid>() != null)
             {
-                Debug.Log(raycastHit2D.collider.name);
+                //Debug.Log(raycastHit2D.collider.name);
                 if (!alreadyPingedColliderList.Contains(raycastHit2D.collider))
                 {
                     alreadyPingedColliderList.Add(raycastHit2D.collider);

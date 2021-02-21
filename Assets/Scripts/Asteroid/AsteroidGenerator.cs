@@ -7,6 +7,7 @@ public class AsteroidGenerator : MonoBehaviour
     [SerializeField] private GameObject asteroidPrefab;
 
     [SerializeField] private int gridSize = 6;
+    [SerializeField] [Range(1,10)] private int cellsDistance = 2;
 
     private Vector3 startPosition;
     private int corrector;
@@ -32,9 +33,9 @@ public class AsteroidGenerator : MonoBehaviour
             for (int j = 0; j < gridSize; j++)
             {
                 Instantiate(asteroidPrefab,
-                            new Vector3(-1 * (gridSize - 1) + j * 2 + corrector, 1 * (gridSize - 1) - i * 2 + corrector, 0),
-                            Quaternion.identity,
-                            this.transform);
+                            new Vector3(-cellsDistance * (gridSize - 1) + cellsDistance*(j * 2 + corrector),
+                                        cellsDistance * (gridSize - 1) - cellsDistance *(i * 2 + corrector), 0),
+                                        Quaternion.identity, this.transform);
             }
         }
     }

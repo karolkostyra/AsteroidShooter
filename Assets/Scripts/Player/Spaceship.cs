@@ -33,7 +33,6 @@ public class Spaceship : MonoBehaviour
         SimulateRocketEngine(yAxis);
         ClampVelocity();
         Rotate(xAxis * rotateSpeed);
-        //Debug.Log(_rb.velocity.magnitude);
     }
 
     //method to move spaceship
@@ -63,8 +62,7 @@ public class Spaceship : MonoBehaviour
     {
         return !this.gameObject.activeSelf;
     }
-
-    /*
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Asteroid")
@@ -72,5 +70,4 @@ public class Spaceship : MonoBehaviour
             this.gameObject.SetActive(false);
         }
     }
-    */
 }
